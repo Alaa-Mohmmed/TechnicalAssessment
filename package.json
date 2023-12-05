@@ -1,0 +1,19 @@
+{
+  "name": "technicalassessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "technicalAssessment"
+  },
+  "author": "Alaa Mohmmed",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}

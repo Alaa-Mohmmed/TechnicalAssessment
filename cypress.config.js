@@ -25,8 +25,7 @@ module.exports = defineConfig({
 
   },
   env: {
-    TAGS: '@testing',
-    // ProBaseURL: 'https://pro.staging.maiia.com',
+    TAGS: '@testing'
     
   },
 

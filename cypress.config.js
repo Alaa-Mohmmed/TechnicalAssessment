@@ -5,27 +5,26 @@ module.exports = defineConfig({
 
   'cypress-cucumber-preprocessor': {
 
-    nonGlobalStepDefinitions: false,
-
-    stepDefinitions: 'cypress/integrations/*/*',
-
-  },
+    nonGlobalStepDefinitions: true,
+    stepDefinitions: 'cypress/integration',
+    waitForAnimations: false,
+    animationDistanceThreshold: 50,  },
   e2e: {
 
     setupNodeEvents(on, config) {
- 
+
       return require('./cypress/plugins/index.js')(on, config)
 
     },
-    baseUrl: 'https://opensource-demo.orangehrmlive.com/',
+    baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php',
 
     specPattern: 'cypress/integration/**/*.feature',
 
-    supportFile:false
-
+    supportFile: "cypress/support/e2e.js",
   },
   env: {
-    TAGS: '@testing'    
+    baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php',
+    TAGS: '@testing'
   },
 
 })

@@ -28,22 +28,21 @@ And('as an admin I can click on add new user button', () => {
 
 Then('as an admin I can fill user data {string}, {string}, {string}, {string}, {string} and {string}',
     (userRole, empName, status, username, password, confirmPassword) => {
-        cy.addNewUser(username, password)
-        // cy.selectAdmin().eq('0').click()
-        // cy.selectAdminEmp().contains(userRole).click({force:true})
+        cy.selectAdmin().eq('0').click()
+        cy.selectAdminEmp().contains(userRole).click({force:true})
 
-        // cy.selectEmployee().type(empName).eq('0')
-        // cy.selectEmpName().should('have.text',empName).click()
+        cy.selectEmployee().type(empName).eq('0')
+        cy.selectEmpName().should('have.text',empName).click()
 
-        // cy.scrollTo('bottom')
+        cy.scrollTo('bottom')
         
-        // cy.selectStatus().eq('0').click()
-        // cy.selectAdminEmp().contains(status).click()
+        cy.selectStatus().eq('0').click()
+        cy.selectAdminEmp().contains(status).click()
 
-        // cy.addUsername().type(username)
+        cy.addUsername().type(username)
 
-        // cy.addPassword().type(password)
-        // cy.addPassword().type(confirmPassword)
+        cy.addPassword().type(password)
+        cy.addPassword().type(confirmPassword)
 
     });
     Then('as an admin I can add new user with {string} and {string} api',(username,password) => {

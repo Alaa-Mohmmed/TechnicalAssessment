@@ -1,25 +1,25 @@
 Feature: Manage users
 
 
-    # @testing
-    # Scenario Outline: Navigate to admin tab
-    #     Given as an admin I navigate to orangeHRM "<pageName>" and login with "<username>" and "<password>"
-    #     When as an admin I click on admin tab on the left side menu
-    #     Then as an admin I can see the system users with title "<pageTitle>"
+    @testing
+    Scenario Outline: Navigate to admin tab
+        Given as an admin I navigate to orangeHRM "<pageName>" and login with "<username>" and "<password>"
+        When as an admin I click on admin tab on the left side menu
+        Then as an admin I can see the system users with title "<pageTitle>"
 
-    #     Examples:
-    #         | username | password | pageName  | pageTitle    |
-    #         | Admin    | admin123 | loginPage | System Users |
+        Examples:
+            | username | password | pageName  | pageTitle    |
+            | Admin    | admin123 | loginPage | System Users |
 
 
-    # @testing
-    # Scenario Outline: Get number of records on the admin users dashboard
-    #     Given as an admin I navigate to orangeHRM "<pageName>" and login with "<username>" and "<password>"
-    #     When as an admin I navigate to system users page "<pageName2>"
-    #     Then as an admin I can see number of existing users
-    #     Examples:
-    #         | username | password | pageName  | pageName2   |
-    #          | Admin    | admin123 | loginPage| adminPanel |
+    @testing
+    Scenario Outline: Get number of records on the admin users dashboard
+        Given as an admin I navigate to orangeHRM "<pageName>" and login with "<username>" and "<password>"
+        When as an admin I navigate to system users page "<pageName2>"
+        Then as an admin I can see number of existing users
+        Examples:
+            | username | password | pageName  | pageName2   |
+             | Admin    | admin123 | loginPage| adminPanel |
 
     @testing
     Scenario Outline: Get number of records on the admin users dashboard
